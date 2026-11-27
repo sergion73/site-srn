@@ -6,26 +6,45 @@
 <meta name="robots" content="noindex">
 <title>Seu e-book | SRN Consultoria</title>
 <link rel="icon" type="image/png" href="/simbolo-srn.png">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@700&family=Inter:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap">
 <style>
-:root{--bg:#F7F9FC;--ink:#141A26;--muted:#4A5468;--royal:#004AAD}
-@media (prefers-color-scheme:dark){:root{--bg:#0F1420;--ink:#E9EEF6;--muted:#A9B4C7;--royal:#7FA8F0}}
-body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;padding:16px}
-main{max-width:34rem;text-align:center}
-img{width:56px;height:auto}
-h1{font-family:Archivo,sans-serif;font-size:1.8rem;margin:1rem 0 .5rem}
-p{color:var(--muted);line-height:1.6}
-a.btn{display:inline-block;background:var(--royal);color:#fff;text-decoration:none;padding:.8rem 1.4rem;border-radius:6px;font-weight:500;margin:.5rem 0}
+:root{--bg:#F7F9FC;--ink:#141A26;--muted:#4A5468;--royal:#004AAD;--card:#141A26;--card-ink:#E9EEF6;--card-muted:#A9B4C7}
+body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;padding:16px}
+main{max-width:34rem;margin:0 auto;text-align:center;padding-top:24px}
+.logo{display:block;margin:0 auto;height:96px;width:auto;max-width:70%}
+h1{font-family:Archivo,sans-serif;font-size:1.8rem;margin:1.2rem 0 .5rem}
+main > p{color:var(--muted);line-height:1.6}
 a{color:var(--royal);font-weight:500}
+a.btn{display:inline-block;background:var(--royal);color:#fff;text-decoration:none;padding:.85rem 1.4rem;border-radius:6px;font-weight:500;margin:.75rem 0 0}
+.card{text-align:left;margin-top:2rem;background:var(--card);color:var(--card-ink);border-radius:10px;padding:1.75rem 1.5rem;box-shadow:0 8px 24px rgba(20,26,38,.18)}
+.card h2{font-family:Archivo,sans-serif;font-size:1.25rem;margin:0 0 .4rem;color:var(--card-ink)}
+.card > p{color:var(--card-muted);line-height:1.55;margin:0 0 1rem;font-size:.95rem}
+.card label,.card legend,.card span,.card .hs-form-required{color:var(--card-ink) !important}
+.card .hs-richtext,.card .hs-richtext p{color:var(--card-muted) !important}
+.skip{font-size:.9rem;margin-top:1.5rem}
 </style>
 </head>
 <body>
 <main>
-<img src="/simbolo-srn.png" alt="">
+<img class="logo" src="/logo-srn.png" alt="SRN Consultoria">
 <h1>Obrigado pelo cadastro</h1>
 <p>O e-book <em>LEGO® Serious Play®: uma ferramenta poderosa para as empresas</em> está pronto para download.</p>
 <p><a class="btn" href="https://52378733.fs1.hubspotusercontent-na1.net/hubfs/52378733/Lego%20Serious%20Play%20uma%20ferramenta%20poderosa%20para%20as%20empresas2026.pdf" target="_blank" rel="noopener">Baixar o e-book (PDF)</a></p>
-<p><a href="/">Voltar ao site</a></p>
+
+<div class="card">
+  <h2>Deseja que entremos em contato?</h2>
+  <p>Se quiser, marque a opção e conte um pouco sobre você. Essas informações são opcionais e o download não depende delas.</p>
+  <script charset="utf-8" src="https://js.hsforms.net/forms/embed/v2.js"></script>
+  <script>
+    hbspt.forms.create({
+      region: "na1",
+      portalId: "52378733",
+      formId: "e6404db9-d574-46ad-8e9c-9659a8355ecd"
+    });
+  </script>
+</div>
+
+<p class="skip"><a href="/">Voltar ao site</a></p>
 </main>
 </body>
 </html>

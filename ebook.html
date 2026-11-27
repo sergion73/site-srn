@@ -8,29 +8,21 @@
 <link rel="icon" type="image/png" href="/simbolo-srn.png">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Inter:wght@400;500&display=swap">
 <style>
-:root{--bg:#F7F9FC;--ink:#141A26;--muted:#4A5468;--royal:#004AAD}
-@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1420;--ink:#E9EEF6;--muted:#A9B4C7;--royal:#7FA8F0}}
-:root[data-theme="dark"]{--bg:#0F1420;--ink:#E9EEF6;--muted:#A9B4C7;--royal:#7FA8F0}
+:root{--bg:#F7F9FC;--ink:#141A26;--muted:#4A5468;--royal:#004AAD;--card:#141A26;--card-ink:#E9EEF6;--card-muted:#A9B4C7}
 body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-serif;padding:16px;display:flex;justify-content:center;align-items:flex-start}
 main{max-width:34rem;width:100%;text-align:center;padding-top:24px}
-.brand{display:flex;align-items:center;justify-content:center;gap:.6rem}
-.brand img{width:34px;height:auto}
-.brand b{font-family:Archivo,sans-serif;font-weight:800;letter-spacing:.14em;font-size:1.05rem;color:var(--ink)}
-.brand span{font-family:Archivo,sans-serif;font-weight:500;letter-spacing:.06em;font-size:1.05rem;color:var(--muted)}
+.logo{display:block;margin:0 auto;height:96px;width:auto;max-width:70%}
 h1{font-family:Archivo,sans-serif;font-size:1.8rem;margin:1.2rem 0 .5rem;color:var(--ink)}
 main > p{color:var(--muted);line-height:1.6}
 a{color:var(--royal);font-weight:500}
-.form-box{text-align:left;margin-top:1.5rem;background:#fff;color:#141A26;border:1px solid #d7dde8;border-radius:10px;padding:1.5rem}
-.form-box label,.form-box legend,.form-box .hs-richtext,.form-box .hs-richtext p,.form-box .hs-form-required,.form-box span{color:#141A26 !important}
-.form-box .hs-richtext p{color:#4A5468 !important}
+.form-box{text-align:left;margin-top:1.5rem;background:var(--card);color:var(--card-ink);border-radius:10px;padding:1.75rem 1.5rem;box-shadow:0 8px 24px rgba(20,26,38,.18)}
+.form-box label,.form-box legend,.form-box span,.form-box .hs-form-required{color:var(--card-ink) !important}
+.form-box .hs-richtext,.form-box .hs-richtext p{color:var(--card-muted) !important}
 </style>
 </head>
 <body>
 <main>
-<div class="brand">
-<img src="/simbolo-srn.png" alt="">
-<span><b>SRN</b> Consultoria</span>
-</div>
+<img class="logo" src="/logo-srn.png" alt="SRN Consultoria">
 <h1>E-book gratuito</h1>
 <p>Preencha o formulário para receber o e-book <em>LEGO® Serious Play®: uma ferramenta poderosa para as empresas</em>.</p>
 <div class="form-box">
@@ -40,25 +32,7 @@ a{color:var(--royal);font-weight:500}
     region: "na1",
     portalId: "52378733",
     formId: "91b063bd-fdd0-417a-af1e-6961a38c54a6",
-    redirectUrl: "https://srnconsultoria.com/ebook-obrigado.html",
-    onFormReady: function () {
-      var root = document.querySelector('.form-box');
-      var labels = {"First Name": "Nome", "Last Name": "Sobrenome"};
-      var tries = 0;
-      var timer = setInterval(function () {
-        tries++;
-        root.querySelectorAll('label, span').forEach(function (el) {
-          var t = el.textContent.trim();
-          if (labels[t] && el.children.length === 0) el.textContent = labels[t];
-        });
-        root.querySelectorAll('.hs-richtext, .hs-richtext p').forEach(function (el) {
-          if (el.children.length === 0 && el.textContent.indexOf('Queremos ouvir') !== -1) {
-            el.textContent = 'Os dados abaixo são usados para enviar o e-book e para a SRN Consultoria entrar em contato, se você quiser.';
-          }
-        });
-        if (tries > 40) clearInterval(timer);
-      }, 250);
-    }
+    redirectUrl: "https://srnconsultoria.com/ebook-obrigado.html"
   });
 </script>
 </div>
